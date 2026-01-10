@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
   <meta charset="UTF-8" />
   <title>Családi Bence – 3D Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#thesis">Thesis</a>
-</nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#thesis">Thesis</a>
+    <a href="https://www.linkedin.com/in/bence-családi-0b6a01286/" target="_blank" aria-label="LinkedIn profile"
+      target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <svg width="28" height="28" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M8 0h56a8 8 0 0 1 8 8v56a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8z" fill="#0A66C2" />
+          <path
+            d="M20 27h8v25h-8V27zm4-11a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9zm10 11h8v3.4h.1c1.1-2 3.8-4.1 7.9-4.1c8.4 0 10 5.5 10 12.6V52h-8V40.2c0-2.8 0-6.4-4-6.4s-4.6 3-4.6 6.2V52h-8V27z"
+            fill="#FFF" />
+        </g>
+      </svg>
+    </a>
+  </nav>
 
-<section id="about" class="section hero">
-     <img class="profile" src="catto.PNG" />
-  <div class="text">
-    <h1>Családi Bence</h1>
-    <h2>Software Engineer</h2>
-    <p>iOS · 3D</p>
-  </div>
+  <section id="about" class="section hero">
+    <img class="profile" src="catto.PNG" />
+    <div class="text">
+      <h1>Családi Bence</h1>
+      <h2>Software Engineer</h2>
+      <p>iOS · 3D</p>
+      <p><strong>About me: </strong>Hello! I'm Családi Bence, a passionate Software Engineer specializing in iOS
+        development and 3D applications.
+        I enjoy creating interactive experiences, exploring new technologies, and turning ideas into real-world
+        projects.</p>
+      <p><strong>Hobbies:</strong> In my free time, I enjoy 3D modeling, building small video games, and improving my
+        iOS development skills.</p>
+      <p><strong>Education:</strong> BSc in Computer Science Engineering at Óbuda University.</p>
+      <p><strong>Languages:</strong> Hungarian (native), English (C1)</p>
+    </div>
+  </section>
 
- 
-</section>
-
-<section id="skills" class="section">
-  <h2>Stack</h2>
-  <div id="skills-canvas" class="canvas-box"></div>
-</section>
 
 
-<section id="projects" class="section split">
-    
-  <div class="text">
-    <h2>3D iOS App with SceneKit</h2>
-    <p>Interactive 3D iOS application</p>
-    <button>App Demo</button>
-    <button>Source Code</button>
-  </div>
+  </section>
 
-  <div id="phone-canvas" class="canvas-box"></div>
-</section>
+  <section id="skills" class="section">
+    <h2>Stack</h2>
+    <div id="skills-canvas" class="canvas-box"></div>
+  </section>
 
-<section id="thesis" class="section split">
-  <div class="text">
-    <h2>University Thesis</h2>
-    <p>Reinforcement Learning in a Virtual Animal Simulations</p>
-    <button>Research Paper</button>
-    <button>GitHub</button>
-  </div>
 
-  <div id="animal-canvas" class="canvas-box"></div>
-</section>
+  <section id="projects" class="section split">
+    <div class="text">
+      <h2>3D Goal Tracking iOS App</h2>
+      <p>
+        This is my first iOS application that I plan to publish on the App Store.
+        It is a small New Year’s resolution tracking app built with SceneKit,
+        featuring a 3D mascot that motivates users and makes goal tracking more engaging.
+      </p>
+      <button>App Demo</button>
+      <button onclick="window.open('https://github.com/bobiuszgithub/NewYearNewMe', '_blank')">Source Code</button>
+    </div>
 
-<script type="module" src="main.js"></script>
+    <div id="phone-canvas" class="canvas-box"></div>
+  </section>
+
+
+  <section id="thesis" class="section split">
+    <div class="text">
+      <h2>University Thesis</h2>
+      <p>
+        My university thesis focuses on reinforcement learning in a virtual meerkat simulation.
+        I designed and implemented intelligent agents that learn social and cooperative behaviors,
+        such as detecting predators, signaling danger to others, and coordinating food search.
+        The project demonstrates how reinforcement learning can model teamwork and emergent
+        behavior in artificial environments.
+      </p>
+      <button>Research Paper</button>
+      <button>GitHub</button>
+    </div>
+
+    <div id="animal-canvas" class="canvas-box"></div>
+  </section>
+
+  <script type="module" src="main.js"></script>
 </body>
+
 </html>

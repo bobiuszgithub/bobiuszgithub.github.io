@@ -19,10 +19,10 @@ nav {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 30px;
   padding: 20px 40px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   z-index: 10;
 }
@@ -37,27 +37,27 @@ nav a:hover {
 }
 
 .section {
-  min-height: 5vh;   
-  padding: 60px 40px;  
+  min-height: 5vh;
+  padding: 60px 40px;
 }
 
 
 .hero {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
-  gap: 40px;               
-  text-align: center;      
-  flex-wrap: wrap;        
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .split {
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-  gap: 60px;               
-  text-align: center;      
-  flex-wrap: wrap;        
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 
@@ -90,12 +90,13 @@ button {
 button:hover {
   background: #555;
 }
+
 #skills {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  align-items: center;    
-  text-align: center;     
-  gap: 20px;               
-  min-height: 5ch;      
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  min-height: 5ch;
 }
