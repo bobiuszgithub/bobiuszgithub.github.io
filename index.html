@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <title>Three.js Cube</title>
+  <title>Családi Bence – 3D Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="three-canvas"></canvas>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#thesis">Thesis</a>
+</nav>
+
+<section id="about" class="section hero">
+     <img class="profile" src="catto.png" />
+  <div class="text">
+    <h1>Családi Bence</h1>
+    <h2>Software Engineer</h2>
+    <p>iOS · 3D</p>
+  </div>
 
  
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+</section>
 
- 
-  <script src="main.js"></script>
+<section id="skills" class="section">
+  <h2>Stack</h2>
+  <div id="skills-canvas" class="canvas-box"></div>
+</section>
+
+
+<section id="projects" class="section split">
+    
+  <div class="text">
+    <h2>3D iOS App with SceneKit</h2>
+    <p>Interactive 3D iOS application</p>
+    <button>App Demo</button>
+    <button>Source Code</button>
+  </div>
+
+  <div id="phone-canvas" class="canvas-box"></div>
+</section>
+
+<section id="thesis" class="section split">
+  <div class="text">
+    <h2>University Thesis</h2>
+    <p>Reinforcement Learning in a Virtual Animal Simulations</p>
+    <button>Research Paper</button>
+    <button>GitHub</button>
+  </div>
+
+  <div id="animal-canvas" class="canvas-box"></div>
+</section>
+
+<script type="module" src="main.js"></script>
 </body>
 </html>
