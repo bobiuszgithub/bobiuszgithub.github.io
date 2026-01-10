@@ -1,2 +1,2 @@
-3D website demo using Three.js  
-bobiuszgithub.github.io
+3D portfolio website using Three.js  
+[Check it out here](https://bobiuszgithub.github.io)
