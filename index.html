@@ -5,6 +5,14 @@
   <meta charset="UTF-8" />
   <title>Családi Bence – 3D Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+   <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -86,22 +94,26 @@
   </section>
 
 
-  <section id="thesis" class="section split">
-    <div class="text">
-      <h2>University Thesis</h2>
-      <p>
-        My university thesis focuses on reinforcement learning in a virtual meerkat simulation.
-        I designed and implemented intelligent agents that learn social and cooperative behaviors,
-        such as detecting predators, signaling danger to others, and coordinating food search.
-        The project demonstrates how reinforcement learning can model teamwork and emergent
-        behavior in artificial environments.
-      </p>
-      <button>Research Paper</button>
-      <button>GitHub</button>
-    </div>
+ <section id="thesis" class="section split">
+  <div class="text">
+    <h2>University Thesis</h2>
+    <p>
+      My university thesis focuses on reinforcement learning in a virtual meerkat simulation.
+      I designed and implemented intelligent agents that learn social and cooperative behaviors,
+      such as detecting predators, signaling danger to others, and coordinating food search.
+      The project demonstrates how reinforcement learning can model teamwork and emergent
+      behavior in artificial environments.
+    </p>
+    <button>Research Paper</button>
+    <button>GitHub</button>
+  </div>
 
+  <div class="canvas-wrapper">
     <div id="animal-canvas" class="canvas-box"></div>
-  </section>
+   <h5 class="disclaimer">(One of my early Blender models when I was a beginner)</h5>
+
+  </div>
+</section>
 
   <script type="module" src="main.js"></script>
 </body>

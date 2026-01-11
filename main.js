@@ -1,5 +1,9 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+//
+// RENDERER, CAMERA, LIGHTS, RESIZE
+//
 function createRenderer(container) {
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
@@ -22,7 +26,6 @@ function createCamera(container) {
 
 function basicLights(scene) {
   scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-
   const dir = new THREE.DirectionalLight(0xffffff, 1.2);
   dir.position.set(5, 5, 5);
   scene.add(dir);
@@ -35,7 +38,7 @@ function resize(renderer, camera, container) {
 }
 
 //
-// SKILLS – lebegő kockák
+// SKILLS 
 //
 function skillsScene() {
   const container = document.getElementById('skills-canvas');
@@ -113,7 +116,7 @@ function phoneScene() {
 }
 
 //
-// THESIS – állat placeholder
+// THESIS
 //
 function animalScene() {
   const container = document.getElementById('animal-canvas');
@@ -123,24 +126,44 @@ function animalScene() {
 
   basicLights(scene);
 
-  const animal = new THREE.Mesh(
-    new THREE.SphereGeometry(1, 32, 32),
-    new THREE.MeshStandardMaterial({ color: 0xffaa55 })
-  );
-
   const base = new THREE.Mesh(
     new THREE.CylinderGeometry(1.2, 1.2, 0.2, 32),
     new THREE.MeshStandardMaterial({ color: 0x444444 })
   );
   base.position.y = -1.1;
-
-  scene.add(animal);
   scene.add(base);
+
+  let animal;
+  const loader = new GLTFLoader();
+  loader.load(
+    'smoothmeerkat.glb',
+    (gltf) => {
+      animal = gltf.scene;
+
+      const box = new THREE.Box3().setFromObject(animal);
+      const size = new THREE.Vector3();
+      box.getSize(size);
+      const maxDim = Math.max(size.x, size.y, size.z);
+      animal.scale.setScalar(2.5 / maxDim);
+
+      const center = new THREE.Vector3();
+      box.getCenter(center);
+      animal.position.sub(center);
+
+      animal.position.y += -0.9 + maxDim / 2;
+
+      scene.add(animal);
+    },
+    undefined,
+    (err) => console.error('GLB load error:', err)
+  );
 
   function animate() {
     requestAnimationFrame(animate);
-    animal.rotation.y += 0.005;
-    animal.position.y = Math.sin(Date.now() * 0.002) * 0.1;
+    if (animal) {
+      animal.rotation.y += 0.005;
+      animal.position.y = -0.9 + Math.sin(Date.now() * 0.002) * 0.1;
+    }
     renderer.render(scene, camera);
   }
 
