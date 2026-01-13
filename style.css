@@ -38,9 +38,15 @@ nav a:hover {
 
 .section {
   min-height: 5vh;
-  padding: 60px 40px;
+  padding: 70px 40px;
+  scroll-margin-top: 50x; /* height of your navbar */
 }
-
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: white;
+}
 
 .hero {
   display: flex;
