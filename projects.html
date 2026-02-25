@@ -50,22 +50,50 @@
 
   </nav>
 
-  <section id="about" class="section hero">
-    <div class="text">
-      <h1>Családi Bence</h1>
-      <h2>Software Engineer</h2>
-      <p>iOS · 3D</p>
-      <p><strong>About me: </strong>Hello! I'm Családi Bence, a passionate Software Engineer specializing in iOS
-        development and 3D applications.
-        I enjoy creating interactive experiences, exploring new technologies, and turning ideas into real-world
-        projects.</p>
-      <p><strong>Hobbies:</strong> In my free time, I enjoy 3D modeling, building small video games, and improving my
-        iOS development skills.</p>
-      <p><strong>Education:</strong> BSc in Computer Science Engineering at Óbuda University.</p>
-      <p><strong>Languages:</strong> Hungarian (native), English (C1)</p>
-    </div>
-  </section>
 
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+
+  <!-- Project 1 -->
+  <div class="split">
+    <div class="text">
+      <h3>3D Goal Tracking iOS App</h3>
+      <p>
+        This is my first iOS application that I plan to publish on the App Store.
+        It is a small New Year’s resolution tracking app built with SceneKit,
+        featuring a 3D mascot that motivates users and makes goal tracking more engaging.
+      </p>
+      <button>App Demo</button>
+      <button onclick="window.open('https://github.com/bobiuszgithub/NewYearNewMe', '_blank')">
+        Source Code
+      </button>
+    </div>
+
+    <div id="phone-canvas" class="canvas-box"></div>
+  </div>
+
+  <!-- Project 2 (Thesis) -->
+  <div class="split" style="margin-top: 100px;">
+    <div class="text">
+      <h3>University Thesis</h3>
+      <p>
+        My university thesis focuses on reinforcement learning in a virtual meerkat simulation.
+        I designed and implemented intelligent agents that learn social and cooperative behaviors,
+        such as detecting predators, signaling danger to others, and coordinating food search.
+        The project demonstrates how reinforcement learning can model teamwork and emergent
+        behavior in artificial environments.
+      </p>
+      <button>Research Paper</button>
+      <button>GitHub</button>
+    </div>
+
+    <div class="canvas-wrapper">
+      <div id="animal-canvas" class="canvas-box"></div>
+      <h5 class="disclaimer">(One of my early Blender models when I was a beginner)</h5>
+    </div>
+  </div>
+
+</section>
 
   <script type="module" src="main.js"></script>
 </body>

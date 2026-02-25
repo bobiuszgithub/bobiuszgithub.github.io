@@ -172,6 +172,18 @@ function animalScene() {
 }
 
 // INIT
-skillsScene();
-phoneScene();
-animalScene();
+window.addEventListener('DOMContentLoaded', () => {
+
+  if (document.getElementById('skills-canvas')) {
+    skillsScene();
+  }
+
+  if (document.getElementById('phone-canvas')) {
+    phoneScene();
+  }
+
+  if (document.getElementById('animal-canvas')) {
+    animalScene();
+  }
+
+});
