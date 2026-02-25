@@ -136,7 +136,7 @@ function animalScene() {
   let animal;
   const loader = new GLTFLoader();
   loader.load(
-    'smoothmeerkat.glb',
+    '/smoothmeerkat.glb',
     (gltf) => {
       animal = gltf.scene;
 
